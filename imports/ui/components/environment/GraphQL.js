@@ -4,7 +4,6 @@ import ReactElement from '../atom/ReactElement';
 
 let GraphQL;
 export default GraphQL = ({ loading, ...otherProps }) => {
-  debugger;
   return loading ? null : (
     <ReactElement {...otherProps}/>
   );
