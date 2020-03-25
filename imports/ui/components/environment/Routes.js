@@ -4,11 +4,9 @@ import { Switch, Route, Link } from "react-router-dom";
 import { APITemplate, IconTemplate, MainTemplate } from "../ecosystem";
 import { NewAccountDomain } from "../../domains";
 
-export default () => {
-  console.log(NewAccountDomain.getProps());
-  return (
+export default () => (
   <Switch>
-    <Route {...NewAccountDomain.getProps()} />
+    <Route {...NewAccountDomain.getProps()} path="new-account" />
     <Route path="/api">
       <APITemplate />
     </Route>
@@ -19,5 +17,4 @@ export default () => {
       <MainTemplate />
     </Route>
   </Switch>
-  );
-}
+);
