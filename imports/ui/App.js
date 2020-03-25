@@ -1,5 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const App = () => <h1>Hello</h1>;
+import { withTheme } from "./components/environment/Theme";
+import { withRouter } from "./components/environment/Router";
+import Routes from "./components/environment/Routes";
 
-export default App;
+export default withTheme(withRouter(Routes));
