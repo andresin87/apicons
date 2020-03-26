@@ -1,19 +1,28 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core/styles";
-
+import GridStyles from "../molecule/GridStyles";
 import ReactElement from "../atom/ReactElement";
 
-let GridStyles;
-export default GridStyles = ({ gridSettings, ...otherProps }) => (
-  <Grid {...gridSettings}>
-    <ReactElement {...otherProps} />
-  </Grid>
-);
+let CenteredTemplate;
+export default CenteredTemplate = (props) => {
+  return (
+    <GridStyles
+      gridSettings={{
+        alignContent: "center",
+        alignItems: "center",
+        container: true,
+        direction: "column",
+        justify: "center",
+        spacing: 0,
+        style: { height: "100vh" },
+      }}
+    >
+      <ReactElement {...props} />
+    </GridStyles>
+  );
+};
 
-export const withGridStyles = (Component, gridSettings) => (props) => (
-  <GridStyles gridSettings={gridSettings} {...props}>
+export const withCenteredTemplate = (Component) => (props) => (
+  <CenteredTemplate {...props}>
     <Component />
-  </GridStyles>
+  </CenteredTemplate>
 );
