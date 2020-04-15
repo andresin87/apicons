@@ -6,6 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
+import MainDomain from './domains/MainDomain'
+
 export default class LoginForm extends Component {
   registerUser = (event) => {
     event.preventDefault();
@@ -67,6 +69,18 @@ export default class LoginForm extends Component {
                   Login
                 </Button>
               </Grid>
+            </Grid>
+          </Paper>
+          <Paper elevation={0} style={{ margin: "10px 0" }}>
+            <Grid
+              container
+              justify="space-between"
+              alignContent="center"
+              alignItems="center"
+              direction="row"
+              style={{ width: "100%" }}
+            >
+              <Grid item><Button href={MainDomain.path} size="small" color="primary">← go back</Button></Grid>
             </Grid>
           </Paper>
         </Grid>
