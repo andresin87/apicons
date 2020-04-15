@@ -8,3 +8,4 @@ export default new DomainModel({
   component: withCenteredTemplate(LoginForm),
   path: "/login",
 });
+
